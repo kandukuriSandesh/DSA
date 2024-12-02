@@ -86,7 +86,7 @@ Here, we divide the array to multiple till each array has one element,later we m
 function mergeSort(arr){
     if(arr.length <2) return arr             //base case for recursion
     let mid = Math.floor(arr.length/2)
-    let leftArr = arr.slice(0,mid);
+    let leftArr = arr.slice(0,mid);                      // big o here is nlogn
     let rightArr = arr.slice(mid);
 
     return merge(mergeSort(leftArr),mergeSort(rightArr))
@@ -97,11 +97,11 @@ function mergeSort(arr){
 function merge(leftArr,rightArr){
     let sortedArr=[];
 
-    while(leftArr.length&&rightArr.length){
+    while(leftArr.length&&rightArr.length){     
          if(leftArr[0]<=rightArr[0]){
-             sortedArr.push(leftArr.shift())
+             sortedArr.push(leftArr.shift())               // here its on(n)
          }else{
-            sortedArr.push(rightArr.shift())
+            sortedArr.push(rightArr.shift())               // overall time complexity is nlogn which is the one of the best sorting algorithms
          }
     }
 
