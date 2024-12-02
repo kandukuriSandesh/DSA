@@ -15,7 +15,7 @@ function fibonacci(n){
         seq.push(newNum)
     }
 
-    console.log(seq)
+    return seq;
 }
 
 
@@ -80,14 +80,6 @@ function recursiveFactorial(n){
     }
     return n * recursiveFactorial(n-1)
 }
-
-console.log(recursiveFactorial(5))
-
-
-//Search Algorithms
-
-
-
 
 
 
