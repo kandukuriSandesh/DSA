@@ -54,5 +54,56 @@
 
    }
 
+/* 
+Quick sort
+here any element is considered as a pivot (point from where to decide to sort) and all the elements in the array 
+are divided ,if less towards left and if greater towards right as seperate elements and same is repeated on subsets
+*/
 
-   console.log(insertionSort([5,4,3,2,1]))
+function quickSort(arr){
+    if(arr.length<2) return arr   //base case for recursion
+    let left = []
+    let right = []
+    let pivot = arr[arr.length-1] //last element
+    arr.forEach(num => {
+       if(num > pivot ){               // big-O (n^2)
+        right.push(num)
+       }
+       if(num<pivot){
+        left.push(num)
+       }
+    });
+
+    return [...quickSort(left),pivot,...quickSort(right)]
+}
+
+/* merge sort
+
+Here, we divide the array to multiple till each array has one element,later we merge them comparing the each element
+
+ */
+
+function mergeSort(arr){
+    if(arr.length <2) return arr             //base case for recursion
+    let mid = Math.floor(arr.length/2)
+    let leftArr = arr.slice(0,mid);
+    let rightArr = arr.slice(mid);
+
+    return merge(mergeSort(leftArr),mergeSort(rightArr))
+
+    
+}
+
+function merge(leftArr,rightArr){
+    let sortedArr=[];
+
+    while(leftArr.length&&rightArr.length){
+         if(leftArr[0]<=rightArr[0]){
+             sortedArr.push(leftArr.shift())
+         }else{
+            sortedArr.push(rightArr.shift())
+         }
+    }
+
+    return [...sortedArr,...leftArr,...rightArr]
+}
