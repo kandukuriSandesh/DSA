@@ -1,0 +1,66 @@
+@ Array @
+
+Insert/remove from end - O(1)
+
+Insert / remove from beginning - O(n)
+
+Access - (1)
+
+Search - O(n)
+
+Push/pop - O(1)
+
+shift/unshift/concat/slice/splice - O(n)
+
+forEach /map/filter/reduce - O(n)
+
+
+@ Object @
+
+ Insert,remove,access - o(n)
+
+ search - O(n)
+
+ methods in object.keys,values,entries - O(n);
+
+@ Set @
+
+ Arrays vs Sets
+
+ Array can contain duplicate values but sets cannot have
+
+ Insertion Order is maintained in arrays but it is not the case with sets
+ 
+ Searching and deleting an element in the set is faster compared to arrays
+
+  set Search is done using set.has("element to be Searched") // returns true if element is present  // O(n)
+
+  set delete is done using set.delete("element to be deleted") // returns false if element is // O(n)
+
+  const set = new Set([1,2,3])   ///syntax
+
+@ Map @
+
+ Objects are unordered but maps are ordered
+
+ keys in objects can be string or symbol type whereas in maps, they can be of any type
+
+ An Object has a prototype and may contain a few default keys which collide with your own keys if your are not careful,. A map on other hand doesnt contain any keys by default 
+
+ Objects are not iterables where as maps are iterables
+
+ The number os item sin an object must be determined manually where as it is readily availbale in the map through size property
+
+ Apart from storing the data, you can attach functionality to an object whereas maps are restricted to just storing data
+
+  const map = new Map([['a',1].['b',2]])   //syntax a is key and 1 is values
+
+  map.set('c',3) //add the key-value pair in the map
+
+  map.has("a") // returns true
+
+  map.delete('a') // deletes key a 
+
+  map.size // returns no of the element in the map
+
+  map.clear() // deletes the whole values in the map 

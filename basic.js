@@ -83,6 +83,13 @@ function recursiveFactorial(n){
 
 
 
+const set = new Set([1])
+
+set.add(4)
+
+set.has(4)
+
+console.log(set.size)
 
 
 
