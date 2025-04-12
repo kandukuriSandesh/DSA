@@ -54,7 +54,6 @@ function isPrime(num){
 
 function isPowerOfTwo(num){
     let multipleOfTwo = 1;
-    let two = 2
     if(num == 1 || num ===2) return true
     if(num<1) return false
     for(let i = 1;multipleOfTwo<num ;i++){   // checking whether multiple of two is < num as condition to quite loop early

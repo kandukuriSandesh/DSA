@@ -30,3 +30,8 @@ class Stack{
 
 const stackEntries = new Stack(1,2,7)
 
+//use cases 
+// Browser history tracking 
+// Undo operations hen typing 
+//Call Stack in JS runtime
+
